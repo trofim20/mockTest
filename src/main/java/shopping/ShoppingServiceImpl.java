@@ -37,6 +37,7 @@ public class ShoppingServiceImpl implements ShoppingService {
     }
 
     @Override
+    //после покупки корзина не очищается
     public boolean buy(Cart cart) throws BuyException {
         if (cart.getProducts().isEmpty()) {
             return false;

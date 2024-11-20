@@ -55,6 +55,7 @@ public class Cart {
      * Проверить допустимо ли добавить такое количество товара в корзину
      * @throws IllegalArgumentException - если недопустимо
      */
+    // здесь должно быть if (product.getCount() < count)
     private static void validateCount(Product product, int count)
             throws IllegalArgumentException {
         if (product.getCount() - count <= 0) {
