@@ -22,6 +22,7 @@ public class ShoppingServiceImpl implements ShoppingService {
     }
 
     @Override
+    //каждый вызов этого метода создаёт новую корзину
     public Cart getCart(Customer customer) {
         return new Cart(customer);
     }
@@ -38,6 +39,7 @@ public class ShoppingServiceImpl implements ShoppingService {
 
     @Override
     //после покупки корзина не очищается
+    //нет проверки на null
     public boolean buy(Cart cart) throws BuyException {
         if (cart.getProducts().isEmpty()) {
             return false;
@@ -54,6 +56,7 @@ public class ShoppingServiceImpl implements ShoppingService {
      * Проверить, что покупка может быть совершена
      * @throws BuyException - если покупка не может быть совершена
      */
+    //нет проверки на отрицательное количество товаров в корзине
     private static void validateCanBuy(Cart cart) throws BuyException {
         for (Map.Entry<Product, Integer> entry : cart.getProducts().entrySet()) {
             Product product = entry.getKey();

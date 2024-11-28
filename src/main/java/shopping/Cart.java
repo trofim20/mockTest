@@ -56,6 +56,7 @@ public class Cart {
      * @throws IllegalArgumentException - если недопустимо
      */
     // здесь должно быть if (product.getCount() < count)
+    //текущее условие блокирует добавление допустимого количества товара
     private static void validateCount(Product product, int count)
             throws IllegalArgumentException {
         if (product.getCount() - count <= 0) {
