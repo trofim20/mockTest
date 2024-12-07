@@ -33,6 +33,7 @@ public class ShoppingServiceTest {
 
     /**
      * Тестирование получения всех продуктов
+     * Не нужно тестировать, так как внутри метода вызвается только метод мок объекта
      */
     @Test
     public void testGetAllProducts() {
@@ -40,6 +41,7 @@ public class ShoppingServiceTest {
 
     /**
      * Тестирование получения товара по имени
+     * Не нужно тестировать, так как внутри метода вызвается только метод мок объекта
      */
     @Test
     public void testGetProductByName() {
